@@ -1,0 +1,89 @@
+<div class='scholars-contents'>
+  <header class="scholars-header">
+  </header>
+  <div class="scholars-main">
+    <h2 class="scholars-title">あなたの知識を投稿しよう！</h2>
+    <%= form_with(model: @scholar, local: true) do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# タイトルカテゴリー %>
+    <div class="scholars-detail">
+      <div class="weight-bold-text">タイトルカテゴリー</div>
+        <div class="form">
+          <div class="weight-bold-text">
+            カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+      </div>
+    </div>
+    <%# /タイトルカテゴリー %>
+    
+    <%# 投稿画像 %>
+    <div class="imag-upload">
+      <div class="weight-bold-text">
+        投稿画像
+        <span class="indispensable">任意</span>
+      </div>
+      <div class="click-upload">
+       <p>
+        クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :image, id:"scholars-image" %>
+    </div>
+    <%# /投稿画像 %>
+
+    <%# タイトルと内容 %>
+    <div class="new-scholars">
+      <div class="weight-bold-text">
+        タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"scholars-text", id:"scholar-name", placeholder:"タイトル（必須　40字まで)", maxlength:"40" %>
+      <div class="scholars-explain">
+        <div class="weight-bold-text">
+          内容
+          <span class="indispensable">必須</span>
+        </div>
+      <%= f.text_area :text, class:"scholars-text", id:"scholars-info", placeholder:"タイトル内容（必須　1,000文字まで)" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /タイトルと内容 %>
+
+    <%# 下部ボタン%>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%= link_to '戻る', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン%>
+
+    <%# 注意書き%>
+    <div class="cation">
+      <P class="sentence">
+      投稿における注意事項
+      </p>
+      <P class="sentence">
+      1.他者の著作権・著作権人格権・商標権・肖像権等の権利を侵害する行為をしないこと
+      </p>
+      <P class="sentence">
+      2.違法行為やアダルトな内容、その他社会通念上不適切な内容の投稿をしないこと
+      </p>
+      <P class="sentence">
+      3.他者を誹謗中傷・批判する内容を投稿しないこと
+      </p>
+      <P class="sentence">
+      以上3点を守り、当サービスをお楽しみください
+      </p>
+    </div>
+    <%# /注意書き%>
+  </div>
+  <% end %>
+
+  <footer class="scholars-footer">
+    <p class="inc">
+      Scholar
+    </P>
+  </footer>
+</div>
+    
+    
