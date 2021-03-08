@@ -2,14 +2,14 @@
 <div class='main'>
 
 <%# 画面上部の画像部分%>
-<div class='title-contents'>
-  <h2 class='service-title'>
-    あなたの投稿で世界を変えよう
-  </h2>
-  <p class='service-explain'>
-    scholarはあなたの投稿を待っています
-  </p>
-</div>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      あなたの投稿で世界を変えよう
+    </h2>
+    <p class='service-explain'>
+      scholarはあなたの投稿を待っています
+    </p>
+  </div>
 
   <%# 新規投稿一覧 %>
   <div class='scholar-contens'>
@@ -55,8 +55,12 @@
   <%# 投稿一覧 %>
 </div>
 
-
-
+<%# 投稿機能 %>
+<%= link_to(new_scholar_path, class: 'post-btn') do %>
+  <span class='post-btn-text'>投稿する</span>
+  <%#= image-tag '' , size: '185x50 ,class: "post-btn-icon" %>
+<%end%>
+<%# /投稿機能 %>
 <%= render "shared/footer" %>
 
   
