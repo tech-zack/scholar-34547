@@ -1,2 +1,63 @@
-<h1>Scholar#index</h1>
-<p>Find me in app/views/scholar/index.html.erb</p>
+<%= render "shared/header"%>
+<div class='main'>
+
+<%# 画面上部の画像部分%>
+<div class='title-contents'>
+  <h2 class='service-title'>
+    あなたの投稿で世界を変えよう
+  </h2>
+  <p class='service-explain'>
+    scholarはあなたの投稿を待っています
+  </p>
+</div>
+
+  <%# 新規投稿一覧 %>
+  <div class='scholar-contens'>
+    <h2 class='title'>ピックアップカテゴリー</h2>
+    <ul class='scholar-lists'>
+      <%# @scholars.each do |scholar|%>
+      <li class='list'>
+        <%#= link_to scholar_path(scholar.id) do%>
+        <div class='scholar-img-content'>
+         <%#= image_tag scholar.image, class: "scholar-img"%>
+        </div>
+        <div class='scholar-info'>
+          <h3 class='scholar-name'>
+            <%#= scholar.title %>
+          </h3>
+          <div class='sample-btn'>
+            <%#= image_tag "sample.png", class: "sample-icon"%>
+          </div>
+        </div>
+      <%# end %>
+     </li>
+    </ul>
+  </div>
+  <%# 新規投稿一覧 %>
+  
+  <%# 投稿一覧 %>
+    <div class='scholar-contens'>
+      <h2 class='title'>カテゴリー</h2>
+      <ul>
+        <li><%= link_to 'エンタメ', "#", class: "index-link" %></li>
+        <li><%= link_to '芸術、デザイン', "#", class: "index-link" %></li>
+        <li><%= link_to 'コンピュータ、IT', "#", class: "index-link" %></li>
+        <li><%= link_to '料理、食べ物、飲み物', "#", class: "index-link" %></li>
+        <li><%= link_to 'スポーツ、格闘技', "#", class: "index-link" %></li>
+        <li><%= link_to '動物、生物、植物', "#", class: "index-link" %></li>
+        <li><%= link_to 'サイエンス', "#", class: "index-link" %></li>
+        <li><%= link_to '数学、算数', "#", class: "index-link" %></li>
+        <li><%= link_to '言語', "#", class: "index-link" %></li>
+        <li><%= link_to '歴史、人物', "#", class: "index-link" %></li>
+        <li><%= link_to '病気、健康、医療', "#", class: "index-link" %></li>
+      </ul>
+    </div>
+  <%# 投稿一覧 %>
+</div>
+
+
+
+<%= render "shared/footer" %>
+
+  
+  
