@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<%# scholarの概要 %>
+<div class="scholar-show">
+  <div class="scholar-box">
+    <h2 class="name">
+      <%= @scholar.category.name %>
+    </h2>
+    <h2 class="name">
+      <%= @scholar.title %>
+    </h2>
+    <div class="scholar-img-content">
+      <%= image_tag @scholar.image.variant(resize: '200x200'), class:"scholar-box-img" %>
+    </div>
+    <h2 class="name">
+      <%= @scholar.text %>
+    </h2>
+    <h2 class="name">
+      <%= @scholar.user.nickname %>
+    </h2>
+  <% if user_signed_in? %>
+    <% if current_user.id == @scholar.user_id %>
+      <%= link_to "編集",edit_scholar_path(@scholar.id), method: :get, class: "scholar-blue-btn" %>
+     <p class="or-text">or</p>
+      <%= link_to "削除", scholar_path(@scholar.id), method: :delete, class:"scholar-destroy"%>
+    <% end %>
+  <% end %>
+  <div class="option">
+    <div class="like-btn">
+      <%#= image_tag"star.png" ,class:"like-star-icon" ,width:"20" ,height:"20" %>
+      <span>いいね！ 0</span>
+    </div>
+  </div>
+</div>
+<%# /scholarの概要 %>
+
+<%= render "shared/footer" %>

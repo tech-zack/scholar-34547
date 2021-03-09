@@ -1,4 +1,5 @@
 class ScholarsController < ApplicationController
+  
   def index
     @scholars = Scholar.all
   end
@@ -16,10 +17,26 @@ class ScholarsController < ApplicationController
     end
   end
 
+  def show
+    @scholar = Scholar.find(params[:id])
+  end
+
+  def edit
+    @scholar = Scholar.find(params[:id])
+  end
+
+  def update
+    @scholar = Scholar.find(params[:id])
+    if @scholar.update(scholar_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
   
   def scholar_params
     params.require(:scholar).permit(:title, :text, :category_id, :image).merge(user_id: current_user.id)
   end
-  
 end
