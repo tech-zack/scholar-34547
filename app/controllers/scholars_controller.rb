@@ -34,6 +34,13 @@ class ScholarsController < ApplicationController
     end
   end
 
+  def destroy
+    @scholar = Scholar.find(params[:id])
+    if @scholar.destroy
+      redirect_to root_path
+    end
+  end
+
   private
   
   def scholar_params
