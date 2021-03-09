@@ -1,6 +1,6 @@
 class ScholarsController < ApplicationController
   def index
-    @scholars = Scholar.order("created_at DESC")
+    @scholars = Scholar.all
   end
 
   def new
@@ -19,7 +19,7 @@ class ScholarsController < ApplicationController
   private
   
   def scholar_params
-    params.require(:scholar).permit(:title, :text, :category_id)
+    params.require(:scholar).permit(:title, :text, :category_id, :image).merge(user_id: current_user.id)
   end
   
 end
