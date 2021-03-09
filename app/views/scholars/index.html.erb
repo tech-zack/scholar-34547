@@ -15,44 +15,27 @@
   <div class='scholar-contens'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <ul class='scholar-lists'>
-      <%# @scholars.each do |scholar|%>
+      <% @scholars.each do |scholar|%>
       <li class='list'>
-        <%#= link_to scholar_path(scholar.id) do%>
-        <div class='scholar-img-content'>
-         <%#= image_tag scholar.image, class: "scholar-img"%>
-        </div>
         <div class='scholar-info'>
           <h3 class='scholar-name'>
-            <%#= scholar.title %>
+            <%= scholar.category.name %>
           </h3>
+          <h3 class='scholar-category'>
+            <%= scholar.title %>
+          </h3>
+        <div class='scholar-img-content'>
+         <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img' %>
+        </div>
           <div class='sample-btn'>
-            <%#= image_tag "sample.png", class: "sample-icon"%>
+            <%#= image_tag scholar.image, class: 'scholar-image' %>
           </div>
         </div>
-      <%# end %>
+      <% end %>
      </li>
     </ul>
   </div>
   <%# 新規投稿一覧 %>
-  
-  <%# 投稿一覧 %>
-    <div class='scholar-contens'>
-      <h2 class='title'>カテゴリー</h2>
-      <ul>
-        <li><%= link_to 'エンタメ', "#", class: "index-link" %></li>
-        <li><%= link_to '芸術、デザイン', "#", class: "index-link" %></li>
-        <li><%= link_to 'コンピュータ、IT', "#", class: "index-link" %></li>
-        <li><%= link_to '料理、食べ物、飲み物', "#", class: "index-link" %></li>
-        <li><%= link_to 'スポーツ、格闘技', "#", class: "index-link" %></li>
-        <li><%= link_to '動物、生物、植物', "#", class: "index-link" %></li>
-        <li><%= link_to 'サイエンス', "#", class: "index-link" %></li>
-        <li><%= link_to '数学、算数', "#", class: "index-link" %></li>
-        <li><%= link_to '言語', "#", class: "index-link" %></li>
-        <li><%= link_to '歴史、人物', "#", class: "index-link" %></li>
-        <li><%= link_to '病気、健康、医療', "#", class: "index-link" %></li>
-      </ul>
-    </div>
-  <%# 投稿一覧 %>
 </div>
 
 <%# 投稿機能 %>
