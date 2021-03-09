@@ -17,6 +17,7 @@
     <ul class='scholar-lists'>
       <% @scholars.each do |scholar|%>
       <li class='list'>
+       <%= link_to scholar_path(scholar.id) do %>
         <div class='scholar-info'>
           <h3 class='scholar-name'>
             <%= scholar.category.name %>
@@ -31,8 +32,9 @@
             <%#= image_tag scholar.image, class: 'scholar-image' %>
           </div>
         </div>
-      <% end %>
-     </li>
+       <% end %>
+      </li>
+     <% end %>
     </ul>
   </div>
   <%# 新規投稿一覧 %>
