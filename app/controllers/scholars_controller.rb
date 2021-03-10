@@ -5,6 +5,7 @@ class ScholarsController < ApplicationController
   end
 
   def new
+    @scholars = Scholar.all
     @scholar = Scholar.new
   end
 
@@ -19,6 +20,8 @@ class ScholarsController < ApplicationController
 
   def show
     @scholar = Scholar.find(params[:id])
+    @messages = Message.all
+    @message = Message.new
   end
 
   def edit
