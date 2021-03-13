@@ -10,7 +10,7 @@
       <%= @scholar.title %>
     </h2>
     <div class="scholar-img-content">
-      <%= image_tag @scholar.image.variant(resize: '200x200'), class:"scholar-box-img" %>
+      <%= image_tag @scholar.image.variant(resize: '500x500'), class:"scholar-box-img" if @scholar.image.attached?%>
     </div>
     <h2 class="name">
       <%= @scholar.text %>
