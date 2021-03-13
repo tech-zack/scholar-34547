@@ -1,11 +1,13 @@
 class ScholarsController < ApplicationController
+  before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
+  before_action :set_scholar, only:[:edit,:update,:show, :destroy]
+  before_action :move_to_index, except: [:index, :show,:new,:create]
   
   def index
     @scholars = Scholar.all
   end
 
   def new
-    @scholars = Scholar.all
     @scholar = Scholar.new
   end
 
@@ -19,17 +21,14 @@ class ScholarsController < ApplicationController
   end
 
   def show
-    @scholar = Scholar.find(params[:id])
-    @messages = Message.all
     @message = Message.new
+    @messages = @scholar.messages.includes(:user)
   end
 
   def edit
-    @scholar = Scholar.find(params[:id])
   end
 
   def update
-    @scholar = Scholar.find(params[:id])
     if @scholar.update(scholar_params)
       redirect_to root_path
     else
@@ -38,15 +37,26 @@ class ScholarsController < ApplicationController
   end
 
   def destroy
-    @scholar = Scholar.find(params[:id])
     if @scholar.destroy
       redirect_to root_path
     end
   end
 
+  
   private
   
   def scholar_params
     params.require(:scholar).permit(:title, :text, :category_id, :image).merge(user_id: current_user.id)
   end
+
+  def set_scholar
+    @scholar = Scholar.find(params[:id])
+  end
+
+  def move_to_index
+    if current_user != @scholar.user
+    redirect_to action: :index
+    end
+  end
+
 end
