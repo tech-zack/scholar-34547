@@ -1,0 +1,36 @@
+<%if user_signed_in? %>
+
+ <% if Like.find_by(user_id: current_user.id, scholar_id: scholar.id) %>
+
+ <%=link_to scholar_like_path(scholar, scholar.likes), 
+
+ {method: "delete", remote: true, class: "likes-count"} do %>
+
+ <i class="fas fa-heart haert-red"></i>
+
+ <%= scholar.likes.count %>
+
+ <% end %>
+
+ <% else %>
+
+ <%=link_to scholar_likes_path(scholar), 
+
+ {method: "post", remote: true, class: "likes-count"} do %>
+
+ <i class="far fa-heart"></i>
+
+ <%= scholar.likes.count %>
+
+ <% end %>
+
+<% end %>
+
+ <% else %>
+
+ <i class="far fa-heart"></i>
+ 
+ <%= scholar.likes.count %>
+
+<% end %>
+

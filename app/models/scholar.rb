@@ -3,6 +3,7 @@ class Scholar < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_many :messages
+  has_many :likes
   has_one_attached :image
 
   validates :title, presence: true 
