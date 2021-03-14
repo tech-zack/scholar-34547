@@ -4,7 +4,7 @@ class ScholarsController < ApplicationController
   before_action :move_to_index, except: [:index, :show,:new,:create]
   
   def index
-    @scholars = Scholar.all
+    @scholars = Scholar.all.page(params[:page]).per(5)
   end
 
   def new
