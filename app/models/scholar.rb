@@ -5,6 +5,8 @@ class Scholar < ApplicationRecord
   has_many :messages
   has_many :likes
   has_one_attached :image
+  has_many :liked_users, through: :likes, source: :user
+  has_many :post
 
   validates :title, presence: true 
   validates :text,  presence: true 

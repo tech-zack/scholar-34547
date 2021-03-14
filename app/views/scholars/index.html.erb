@@ -10,36 +10,7 @@
       scholarはあなたの投稿を待っています
     </p>
   </div>
-
-  <%# 新規投稿一覧 %>
-  <div class='scholar-contens'>
-    <h2 class='title'>ピックアップカテゴリー</h2>
-    <ul class='scholar-lists'>
-      <% @scholars.each do |scholar|%>
-      <li class='list'>
-       <%= link_to scholar_path(scholar.id) do %>
-        <div class='scholar-info'>
-          <h3 class='scholar-name'>
-            <%= scholar.category.name %>
-          </h3>
-          <h3 class='scholar-category'>
-            <%= scholar.title %>
-          </h3>
-        <div class='scholar-img-content'>
-         <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img'if scholar.image.attached? %>
-        </div>
-          <div class='sample-btn'>
-            <%#= image_tag scholar.image, class: 'scholar-image' %>
-          </div>
-        </div>
-       <% end %>
-      </li>
-     <% end %>
-    </ul>
-    <%= paginate @scholars %>
-  </div>
-  <%# 新規投稿一覧 %>
-</div>
+<%# /画面上部の画像部分%>
 
 <%# 投稿機能 %>
 <%= link_to(new_scholar_path, class: 'post-btn') do %>
@@ -48,7 +19,32 @@
 <%end%>
 <%# /投稿機能 %>
 
-<%= render "shared/footer" %>
+ <%# ランキング%>
+ <div class='scholar-contens'>
+    <h2 class='title'>ランキング</h2>
+    <ul class='scholar-lists'>
+      <% @scholars.each do |scholar|%>
+      <li class='list'>
+       <%= link_to scholar_path(scholar.id) do %>
+        <div class='scholar-info'>
+          <h3 class='scholar-name'>
+            <%= scholar.user.nickname %>
+          </h3>
+          <h3 class='scholar-category'>
+            <%= scholar.title %>
+          </h3>
+        <div class='scholar-img-content'>
+         <%#= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img'if scholar.image.attached? %>
+        </div>
+        </div>
+       <% end %>
+      </li>
+     <% end %>
+    </ul>
+    <%= paginate @scholars %>
+  </div>
+  <%# ランキング%>
 
-  
-  
+</div>
+
+<%= render "shared/footer" %>
