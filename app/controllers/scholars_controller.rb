@@ -4,6 +4,7 @@ class ScholarsController < ApplicationController
   before_action :move_to_index, except: [:index, :show,:new,:create]
   
   def index
+    scholars = Scholar.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
     @scholars = Scholar.all.page(params[:page]).per(5)
   end
 
