@@ -6,5 +6,10 @@ class User < ApplicationRecord
   validates :nickname,presence: true
 
   has_many :messages
-  has_many :scholars
+  has_many :scholars, dependent: :destroy
+  has_many :likes
+
+  def already_liked?(scholar)
+    self.likes.exists?(scholar_id: scholar.id)
+  end
 end

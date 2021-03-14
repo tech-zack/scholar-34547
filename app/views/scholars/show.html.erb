@@ -26,9 +26,8 @@
     <% end %>
   <% end %>
   <div class="option">
-    <div class="like-btn">
-      <%#= image_tag"star.png" ,class:"like-star-icon" ,width:"20" ,height:"20" %>
-      <span>いいね！ 0</span>
+    <div id = "like-<%= @scholar.id %>">
+      <%= render 'likes/like' , { scholar: @scholar} %>
     </div>
   </div>
 </div>

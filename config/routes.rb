@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root to: 'scholars#index'
   resources :scholars do
     resources :messages, only: [:create]
+    resources :likes, only: [:create, :destroy]
   end
 end
