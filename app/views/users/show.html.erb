@@ -1,0 +1,26 @@
+<%= render "shared/header"%>
+
+<%# 投稿一覧 %>
+<%= "#{@user.nickname}さんの投稿一覧" %>
+  <% @scholars.each do |scholar| %>
+    <li class='list'>
+       <%= link_to scholar_path(scholar.id) do %>
+        <div class='scholar-info'>
+          <h3 class='scholar-name'>
+            <%= scholar.user.nickname %>
+          </h3>
+          <h3 class='scholar-category'>
+            <%= scholar.title %>
+          </h3>
+        <div class='scholar-img-content'>
+         <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img'if scholar.image.attached? %>
+        </div>
+        </div>
+       <% end %>
+      </li>
+     <% end %>
+<%= paginate @scholars %>
+<%#/ 投稿一覧 %>
+
+<%= render "shared/footer" %>
+
