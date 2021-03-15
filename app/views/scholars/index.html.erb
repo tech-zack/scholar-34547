@@ -19,9 +19,9 @@
 <%end%>
 <%# /投稿機能 %>
 
- <%# ランキング%>
+ <%# ピックアップカテゴリー%>
  <div class='scholar-contens'>
-    <h2 class='title'>ランキング</h2>
+    <h2 class='title'>ピックアップカテゴリー</h2>
     <ul class='scholar-lists'>
       <% @scholars.each do |scholar|%>
       <li class='list'>
@@ -34,7 +34,7 @@
             <%= scholar.title %>
           </h3>
         <div class='scholar-img-content'>
-         <%#= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img'if scholar.image.attached? %>
+         <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img'if scholar.image.attached? %>
         </div>
         </div>
        <% end %>
