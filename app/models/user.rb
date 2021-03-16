@@ -9,7 +9,6 @@ class User < ApplicationRecord
   has_many :scholars, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :liked_scholars, through: :likes, source: :scholar
-  has_many :post
 
   def already_liked?(scholar)
     self.likes.exists?(scholar_id: scholar.id)

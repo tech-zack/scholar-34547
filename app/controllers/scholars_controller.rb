@@ -1,8 +1,9 @@
 class ScholarsController < ApplicationController
   before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
   before_action :set_scholar, only:[:edit,:update,:show, :destroy]
-  before_action :move_to_index, except: [:index, :show,:new,:create]
-  
+  before_action :move_to_index, except: [:index, :show,:new,:create,:category]
+  before_action :search_category_scholar, only:[:index, :category, :search, :show]
+
   def index
     @scholars = Scholar.order(created_at: :desc).page(params[:page]).per(5)
   end
@@ -42,8 +43,17 @@ class ScholarsController < ApplicationController
     end
   end
 
+  def category
+    @scholars = @q.result.page(params[:page]).per(5).order("created_at DESC")
+    category_id = params[:q][:category_id_eq]
+    @category = Category.find_by(id: category_id)
+  end
   
   private
+
+  def search_category_scholar
+    @q= Scholar.ransack(params[:q])
+  end
   
   def scholar_params
     params.require(:scholar).permit(:title, :text, :category_id, :image).merge(user_id: current_user.id)
