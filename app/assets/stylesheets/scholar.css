@@ -5,13 +5,7 @@
   background-size: cover;
 }
 
-.header-content-head{
-  font-size: 80px;
-  font-family: fantasy;
-  display: flex;
- justify-content: center;
- color: #fff;
-}
+
 
 .lists-left{
   width: 95%;
