@@ -5,7 +5,11 @@
   <% end %>
 
   <div class='nav'>
-   <div class='header-content-head'>scholar</div>
+   <a class='header-content-head'>
+   <>
+   scholar
+   </p>
+   </a>
     <ul class='lists-left'>
       <% if user_signed_in?%>
         <li><%= link_to "#{current_user.nickname}さん",user_path(current_user.id), class: "user-nickname" %></li>
