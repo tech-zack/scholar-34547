@@ -1,0 +1,249 @@
+
+/*header*/
+.top-page-header{
+  background-image: url('/images/ELL75_yousyohondana20120620.jpg');
+  background-size: contain;
+}
+
+.header-content-head{
+  font-size: 70px;
+  font-family: fantasy;
+  display: flex;
+ justify-content: center;
+ color: #fff;
+}
+
+.lists-left{
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  font-family: fantasy;
+  color: #272727;
+ }
+ 
+ .user-nickname{
+ font-size: 25px;
+ margin:10px;
+ text-decoration: none;
+ font-family: fantasy;
+ color: #fff;
+}
+ 
+ .logout{
+  font-size: 25px;
+  text-decoration: none;
+  color: #fff;
+  margin:10px;
+ }
+ 
+ .log-in{
+  font-size: 25px;
+  text-decoration: none;
+  color: #fff;
+  margin:10px;
+ }
+
+ .sign-up{
+  font-size: 25px;
+  text-decoration: none;
+  color: #fff;
+  margin:10px;
+ }
+ /*header*/
+
+ /*body*/
+ body{
+  background-image: url('/images/FBPAKU3311.jpg');
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
+  background-size: cover;
+ }
+/*body*/
+
+ /*index*/
+ .title-contents{
+  display: flex;
+  justify-content: center;
+ }
+
+ .service-title{
+  font-family: fantasy;
+  font-size: 25px;
+ }
+
+ .post-btn{
+  display: flex;
+ justify-content: center;
+ text-decoration: none;
+  color:black;
+  font-size: 25px;
+ }
+
+ .post-btn-text{
+   color: #272727;
+ }
+
+ .title{
+  display: flex;
+  justify-content: center;
+  font-family: fantasy;
+  color:#272727;
+ }
+
+ .scholar-lists{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+ }
+
+ .scholar-title{
+  display: flex;
+  justify-content: center;
+ }
+
+ .scholar-img {
+  width: 30vh;
+  height: 33vh;
+  border: 1px solid #808080;
+  background-color:#272727;
+  padding: 7px;
+}
+
+.scholar-read{
+  display: flex;
+  justify-content: center;
+}
+
+ .pagination {
+  display: flex;
+  justify-content:space-evenly;
+  text-decoration: none;
+  font-family: fantasy;
+  color:black;
+}
+
+/*index*/
+
+/*second_footer*/
+.scholar-explain{
+  background-color:#272727;
+}
+
+.contents{
+  display: flex;
+  justify-content: center;
+  font-family: fantasy;
+  color: #fff;
+}
+
+/*second_footer*/
+
+/*_footer*/
+.cation{
+  font-family: fantasy;
+  background-color:#272727;
+}
+
+.sentence{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+/*_footer*/
+
+
+
+
+
+/*新規登録.ログイン*/
+
+.form-wrap{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-default{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-right:none;
+  border-left:none;
+  border-top:none;
+  outline: none; /* クリックしたときに表示される枠線を消す */
+  background: transparent; /* 背景の灰色を消す */
+  width: 250px;
+  height: 30px;
+  border-color: #272727;
+}
+
+.register-btn{
+  margin-top: 30px;
+  width: 250px;
+  height: 40px;
+  outline: none; /* クリックしたときに表示される枠線を消す */
+  background: transparent; /* 背景の灰色を消す*/
+  border-color: #272727;
+  font-family: fantasy;
+}
+
+.form-header-text{
+  font-family: fantasy;
+  font-size: 60px;
+}
+
+
+ /*show*/
+ .name{
+  overflow-wrap: break-word;
+ }
+ /*show*/
+
+ /*category*/
+ .lists{
+  display: flex; 
+	justify-content: space-around; 
+  list-style: none;
+ }
+
+ .h2{
+  display: flex;
+  justify-content: center;
+ }
+ /*category*/
+
+ /*show*/
+ .scholar-img-content{
+  display: flex;
+  justify-content: center;
+ }
+ .scholar-box-img{
+  border: 10px solid #272727;
+ }
+ .name{
+  display: flex;
+  justify-content: center;
+ }
+
+ .scholar-blue-btn{
+  display: flex;
+  justify-content: center;
+ }
+
+ .or-text{
+  display: flex;
+  justify-content: center;
+ }
+
+ .scholar-destroy{
+  display: flex;
+  justify-content: center;
+ }
+
+ .option{
+  display: flex;
+  justify-content: center;
+ }
+
+ /*show*/
