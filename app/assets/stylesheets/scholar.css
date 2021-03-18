@@ -1,10 +1,21 @@
 
 /*header*/
-.top-page-header{
+.scholar-main{
   background-image: url('/images/ELL75_yousyohondana20120620.jpg');
+  background-size: 25% auto;
   font-family: fantasy;
-  font-size: 60px;
+  text-align: center;
   color: #fff;
+  font-size: 100px;
+  padding-top: 40px;
+}
+
+.top-page-header{
+  background-color: #272727;
+  padding-top:1px ;
+  font-family: fantasy;
+  color: #fff;
+  
 }
 
 
@@ -124,16 +135,13 @@
 /*index*/
 
 /*second_footer*/
-.scholar-explain{
-  background-color:#272727;
-  
-}
+
 
 .contents{
   display: flex;
   justify-content: center;
   font-family: fantasy;
-  color: #fff;
+  color: #272727;
 }
 
 /*second_footer*/
@@ -141,13 +149,12 @@
 /*_footer*/
 .cation{
   font-family: fantasy;
-  background-color:#272727;
 }
 
 .sentence{
   display: flex;
   justify-content: center;
-  color: #fff;
+  color:#272727;
 }
 
 /*_footer*/

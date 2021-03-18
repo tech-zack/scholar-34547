@@ -16,11 +16,14 @@
         <div class='scholar-img-content'>
          <%= image_tag scholar.image, class: 'scholar-img'if scholar.image.attached? %>
         </div>
-        <a class='scholar-title'>
+        <div class='scholar-text'>
+         <%= scholar.text %>
+        </div>
+        <div class='scholar-title'>
             <%= truncate(scholar.title, length:15) do%>
             <%= link_to "続きを読む" ,scholar_path(scholar.id),class:"scholar-read" %>
             <%end%>
-          </a>
+          </div>
         </div>
        <% end %>
       </li>
