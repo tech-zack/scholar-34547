@@ -5,7 +5,13 @@
   background-size: cover;
 }
 
-
+.header-content-head{
+  font-size: 15vh;
+  font-family: fantasy;
+  display: flex;
+ justify-content: center;
+ color: #fff;
+}
 
 .lists-left{
   width: 95%;
@@ -123,6 +129,7 @@
 /*second_footer*/
 .scholar-explain{
   background-color:#272727;
+  
 }
 
 .contents{
