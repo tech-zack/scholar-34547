@@ -1,16 +1,14 @@
 
 /*header*/
 .top-page-header{
-  background-image: url('/images/ELL75_yousyohondana20120620_TP_V.jpg');
-  background-size: cover;
+  background-image: url('/images/ELL75_yousyohondana20120620.jpg');
+  font-family: fantasy;
+  font-size: 60px;
+  color: #fff;
 }
 
-.header-content-head{
-  font-size: 20vh;
-  font-family: fantasy;
-  
- color: #fff;
-}
+
+
 
 .lists-left{
   width: 95%;
