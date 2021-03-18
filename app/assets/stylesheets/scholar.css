@@ -1,12 +1,12 @@
 
 /*header*/
 .top-page-header{
-  background-image: url('/images/ELL75_yousyohondana20120620.jpg');
-  background-size: contain;
+  background-image: url('/images/ELL75_yousyohondana20120620_TP_V.jpg');
+
 }
 
 .header-content-head{
-  font-size: 70px;
+  font-size: 80px;
   font-family: fantasy;
   display: flex;
  justify-content: center;

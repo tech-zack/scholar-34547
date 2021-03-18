@@ -1,4 +1,12 @@
 <%= render "shared/header"%>
+<div class='title-contents'>
+    <div class='service-title'>
+      勉強から学習へ、学習から学問へ scholarはあなたの投稿を待っています
+    </div>
+  </div>
+<%= link_to(new_scholar_path, class: 'post-btn') do %>
+  <span class='post-btn-text'>投稿する</span>
+<%end%>
 <%# 投稿一覧 %>
 <ul class='scholar-lists'>
   <% @scholars.each do |scholar| %>
@@ -17,6 +25,13 @@
        <% end %>
       </li>
      <% end %>
+     <%if @scholars.length == 0%>
+        <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "scholar-img" %>
+        <% end %>
+      </li>
+      <% end %>
 </ul>
 <%= paginate @scholars %>
 <%#/ 投稿一覧 %>

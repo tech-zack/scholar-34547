@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show]
   before_action :search_category_scholar, only:[:show]
-  before_action :move_to_index, except: [:index, :show,:new,:create,:category]
+  before_action :move_to_index, except: [:show,:category]
   
   def show
     @user = User.find(params[:id])
@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     @q= Scholar.ransack(params[:q])
   end
 
-
+  def move_to_index
+    if current_user != @scholar.user
+    redirect_to action: :index
+    end
+  end
 
 end

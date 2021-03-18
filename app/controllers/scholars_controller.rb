@@ -1,8 +1,9 @@
 class ScholarsController < ApplicationController
   before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
-  before_action :set_scholar, only:[:edit,:update,:show,:destroy]
+  before_action :set_scholar, only:[:edit,:update,:destroy]
   before_action :move_to_index, except: [:index, :show,:new,:create,:category]
   before_action :search_category_scholar, only:[:index, :category, :search, :show]
+  protect_from_forgery except: :search 
 
   def index
     @scholars = Scholar.order(created_at: :desc).page(params[:page]).per(3)
@@ -22,9 +23,15 @@ class ScholarsController < ApplicationController
   end
 
   def show
+    @p =  Scholar.all
+    if @p.ids.include?(params[:id].to_i)
+      @scholar = Scholar.find(params[:id])
     @message = Message.new
     @messages = @scholar.messages.includes(:user)
+  else
+    redirect_to root_path
   end
+ end
 
   def edit
   end
