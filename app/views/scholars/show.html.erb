@@ -6,14 +6,14 @@
     <h2 class="name">
       <%= @scholar.category.name %>
     </h2>
-    <h2 class="name">
-      <%= @scholar.title %>
-    </h2>
     <div class="scholar-img-content">
-      <%= image_tag @scholar.image.variant(resize: '500x500'), class:"scholar-box-img" if @scholar.image.attached?%>
+      <%= image_tag @scholar.image.variant(resize: '300x300'), class:"scholar-box-img" if @scholar.image.attached?%>
     </div>
     <h2 class="name">
-      <%= @scholar.text %>
+      <%= simple_format(@scholar.title) %>
+    </h2>
+    <h2 class="name">
+      <%= simple_format(@scholar.text) %>
     </h2>
     <h2 class="name">
       <%= @scholar.user.nickname %>
@@ -32,7 +32,7 @@
   </div>
 </div>
 <%# /scholarの概要 %>
-
+<% if user_signed_in? %>
 <div class="comment-box">
   <%= form_with model:[@scholar, @message] do |f| %>
   <%= f.text_field :text, class:"comment-text" %>
@@ -47,6 +47,7 @@
   <div id='messages'>
     <% @messages.reverse_each do |message| %>
       <p><%= message.text %></p>
+    <% end %>
     <% end %>
   </div>
 </div>

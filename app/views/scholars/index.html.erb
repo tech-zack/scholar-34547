@@ -1,14 +1,10 @@
 <%= render "shared/header"%>
 <div class='main'>
-
 <%# 画面上部の画像部分%>
   <div class='title-contents'>
-    <h2 class='service-title'>
-      あなたの投稿で世界を変えよう
-    </h2>
-    <p class='service-explain'>
-      scholarはあなたの投稿を待っています
-    </p>
+    <div class='service-title'>
+      勉強から学習へ、学習から学問へ scholarはあなたの投稿を待っています
+    </div>
   </div>
 <%# /画面上部の画像部分%>
 
@@ -21,23 +17,22 @@
 
  <%# ピックアップカテゴリー%>
  <div class='scholar-contens'>
-    <h2 class='title'>ピックアップカテゴリー</h2>
+    <h2 class='title'>What's news</h2>
     <ul class='scholar-lists'>
       <% @scholars.each do |scholar|%>
       <li class='list'>
        <%= link_to scholar_path(scholar.id) do %>
         <div class='scholar-info'>
-          <h3 class='scholar-name'>
-            <%= scholar.user.nickname %>
-          </h3>
-          <h3 class='scholar-category'>
-            <%= scholar.title %>
-          </h3>
-        <div class='scholar-img-content'>
-         <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img'if scholar.image.attached? %>
+          <div class='scholar-img-content'>
+            <%= image_tag scholar.image, class: 'scholar-img'if scholar.image.attached? %>
+          </div>
+          <a class='scholar-title'>
+            <%= truncate(scholar.title, length:15) do%>
+            <%= link_to "続きを読む" ,scholar_path(scholar.id),class:"scholar-read" %>
+            <%end%>
+            <%end%>
+          </a>
         </div>
-        </div>
-       <% end %>
       </li>
      <% end %>
     </ul>
@@ -48,4 +43,4 @@
   
 
 
-<%= render "shared/footer" %>
+<%= render "shared/second-footer"%>

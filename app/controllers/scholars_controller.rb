@@ -1,11 +1,11 @@
 class ScholarsController < ApplicationController
   before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
-  before_action :set_scholar, only:[:edit,:update,:show, :destroy]
+  before_action :set_scholar, only:[:edit,:update,:show,:destroy]
   before_action :move_to_index, except: [:index, :show,:new,:create,:category]
   before_action :search_category_scholar, only:[:index, :category, :search, :show]
 
   def index
-    @scholars = Scholar.order(created_at: :desc).page(params[:page]).per(5)
+    @scholars = Scholar.order(created_at: :desc).page(params[:page]).per(3)
   end
 
   def new
@@ -44,7 +44,7 @@ class ScholarsController < ApplicationController
   end
 
   def category
-    @scholars = @q.result.page(params[:page]).per(5).order("created_at DESC")
+    @scholars = @q.result.page(params[:page]).per(3).order("created_at DESC")
     category_id = params[:q][:category_id_eq]
     @category = Category.find_by(id: category_id)
   end
