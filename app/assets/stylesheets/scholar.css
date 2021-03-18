@@ -2,7 +2,7 @@
 /*header*/
 .top-page-header{
   background-image: url('/images/ELL75_yousyohondana20120620_TP_V.jpg');
-
+  background-size: cover;
 }
 
 .header-content-head{
