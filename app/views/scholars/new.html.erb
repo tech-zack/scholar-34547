@@ -27,7 +27,7 @@
        <p>
         クリックしてファイルをアップロード
       </p>
-      <%= f.file_field :image, id:"scholars-image" %>
+      <%= f.file_field :image, id:"scholars-image" if scholar.image.attached? %>
     </div>
     <%# /投稿画像 %>
 

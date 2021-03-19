@@ -9,7 +9,7 @@
        <%= link_to scholar_path(scholar.id) do %>
         <div class='scholar-info'>
           <div class='scholar-img-content'>
-          <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img' %>
+          <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img'if scholar.image.attached?  %>
           </div>
           <a class='scholar-title'>
             <%= truncate(scholar.title, length:15) do%>
