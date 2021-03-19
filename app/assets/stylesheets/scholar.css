@@ -1,18 +1,31 @@
+ 
+ /* タブレット表示時 */
+ @media (max-width: 1024px) {
+  
+ }
+ 
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+   
+   
+ }
 
+ 
 /*header*/
 .scholar-main{
-  background-image: url('/images/ELL75_yousyohondana20120620.jpg');
-  background-size: 25% auto;
+  background-image: url('/images/JSK542_boroboronoyousyo_TP_V4.jpg');
+  background-size: cover;
   font-family: fantasy;
   text-align: center;
   color: #fff;
-  font-size: 100px;
-  padding-top: 40px;
+  font-size: 80px;
+  padding-top: 120px;
+  padding-bottom: 110px;
 }
 
 .top-page-header{
   background-color: #272727;
-  padding-top:1px ;
+  padding-top: 0.1px;
   font-family: fantasy;
   color: #fff;
   
@@ -80,16 +93,21 @@
   font-size: 25px;
  }
 
- .post-btn{
-  display: flex;
- justify-content: center;
+ .post-red-btn{
  text-decoration: none;
   color:black;
-  font-size: 25px;
+  text-align: center;
+  margin-left: 48%;
  }
 
  .post-btn-text{
+  display : inline-block;
    color: #272727;
+   background-color:red;
+   border-radius: 100px;
+   padding: 15px;
+   border: 1px solid #808080;
+   font-family: fantasy;
  }
 
  .title{
@@ -232,19 +250,37 @@
   justify-content: center;
  }
 
- .scholar-blue-btn{
+ .destory-btn{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
  }
 
- .or-text{
-  display: flex;
-  justify-content: center;
+ .scholar-blue-btn{
+  
+  background-color: red;
+  font-size: 24px;
+  font-weight: bold;
+  color: #272727;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+  border-radius: 100px;
+  text-decoration: none;
+  border: solid 2px #272727;
  }
+
+ 
 
  .scholar-destroy{
-  display: flex;
-  justify-content: center;
+  
+  background-color: red;;
+  font-size: 24px;
+  font-weight: bold;
+  color: #272727;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+  border-radius: 100px;
+  text-decoration: none;
+  border: solid 2px #272727;
  }
 
  .option{
@@ -252,4 +288,107 @@
   justify-content: center;
  }
 
- /*show*/
+ .comment-box {
+  margin: 1px 0;
+  text-align: center;
+  border: solid 2px #272727;
+  border-right:none;
+  border-left:none;
+  border-top:none;
+}
+
+ .comment-text {
+  width: 50%;
+  height: 30px;
+  padding-top: 10px;
+  border: solid 2px #272727;
+  resize: none;
+  border-right:none;
+  border-left:none;
+  border-top:none;
+  outline: none; /* クリックしたときに表示される枠線を消す */
+  background: transparent; 
+}
+
+.comment-btn {
+  line-height: 48px;
+  background-color:red;
+  border: 1px solid #272727;
+  color: black;
+  width: 50%;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 100px;
+  margin-bottom: 2vh;
+}
+
+/*new*/
+
+.scholars-contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scholars-main{
+  background-color:#fff ;
+  border: 1px solid #272727;
+  border-radius: 100px;
+  padding:20px 20px;
+}
+.new-scholars{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+.imag-upload{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+.scholars-detail{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+.scholars-title{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+.sell-btn-contents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scholars-text{
+  width: 40vw;
+  height: 20vh;
+}
+.scholars-title{
+  width: 40vw;
+  height: 10vh;
+}
+.weight-bold-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.back-btn{
+  border-radius: 100px;
+  text-decoration: none;
+  border: solid 2px #272727;
+  background-color: red;;
+  font-size: 24px;
+  color: #272727;
+  margin-top: 10px;
+}
+.post-btn{
+  border-radius: 100px;
+  text-decoration: none;
+  border: solid 2px #272727;
+  background-color: red;;
+  font-size: 24px;
+  color: #272727;
+  margin-top: 10px;
+}
+/*new*/

@@ -1,0 +1,4 @@
+ <%= search_form_for @q, url: scholar_category_path do |f|%>
+    <%= f.collection_select :category_id_eq, Category.where.not(id:1), :id, :name %>
+    <%= f.submit '検索' %>
+    <% end %>

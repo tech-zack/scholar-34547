@@ -9,6 +9,7 @@ class Scholar < ApplicationRecord
   has_many :post
 
   validates :title, presence: true 
+  validates :image, presence: true 
   validates :text,  presence: true 
   validates :category_id, numericality: { other_than: 1 } 
   validates :title, presence: true, unless: :was_attached?

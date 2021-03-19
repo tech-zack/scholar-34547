@@ -21,7 +21,7 @@
     <div class="imag-upload">
       <div class="weight-bold-text">
         投稿画像
-        <span class="indispensable">任意</span>
+        <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
        <p>
@@ -37,7 +37,7 @@
         タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"scholars-text", id:"scholar-name", placeholder:"タイトル（必須 50字まで)", maxlength:"50" %>
+      <%= f.text_area :title, class:"scholars-title", id:"scholar-name", placeholder:"タイトル（必須 50字まで)", maxlength:"50" %>
       <div class="scholars-explain">
         <div class="weight-bold-text">
           内容
@@ -58,12 +58,6 @@
     <%= render "shared/footer" %>
   </div>
   <% end %>
-
-  <footer class="scholars-footer">
-    <p class="inc">
-      Scholar
-    </P>
-  </footer>
 </div>
     
     

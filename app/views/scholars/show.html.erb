@@ -1,3 +1,4 @@
+<%= render "shared/third-header"%>
 <%= render "shared/header" %>
 
 <%# scholarの概要 %>
@@ -7,7 +8,7 @@
       <%= @scholar.category.name %>
     </h2>
     <div class="scholar-img-content">
-      <%= image_tag @scholar.image.variant(resize: '300x300'), class:"scholar-box-img" if @scholar.image.attached?%>
+      <%= image_tag @scholar.image.variant(resize: '300x300'), class:"scholar-box-img" %>
     </div>
     <h2 class="name">
       <%= simple_format(@scholar.title) %>
@@ -18,14 +19,15 @@
     <h2 class="name">
       <%= @scholar.user.nickname %>
     </h2>
+  <div class = destory-btn>
   <% if user_signed_in? %>
     <% if current_user.id == @scholar.user_id %>
       <%= link_to "編集",edit_scholar_path(@scholar.id), method: :get, class: "scholar-blue-btn" %>
-     <p class="or-text">or</p>
       <%= link_to "削除", scholar_path(@scholar.id), method: :delete, class:"scholar-destroy"%>
     <% end %>
   <% end %>
-  <div class="option">
+  </div>
+  <div class="option">気に入った投稿にはいいねを押そう！ここをクリック！
     <div id = "like-<%= @scholar.id %>">
       <%= render 'likes/like' , { scholar: @scholar} %>
     </div>
@@ -40,7 +42,6 @@
     相手のことを考え丁寧なコメントを心がけましょう。
   </p>
   <%= f.button "コメント", type: "submit", class: "comment-btn" do %>
-    <%#= image_tag "comment.png", class:"comment-flag-icon" ,width:"20",height:"25" %>
     <span>コメントする<span>
   <% end %>
  <% end %>

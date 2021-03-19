@@ -1,18 +1,18 @@
+<%= render "shared/third-header"%>
 <%= render "shared/second-header"%>
 <%= render "shared/header"%>
 <div class='main'>
 <%# 画面上部の画像部分%>
   <div class='title-contents'>
     <div class='service-title'>
-      勉強から学習へ、学習から学問へ scholarはあなたの投稿を待っています
+      勉強から学習へ、学習から学問へ scholarはあなたのPOSTを待っています
     </div>
   </div>
 <%# /画面上部の画像部分%>
 
 <%# 投稿機能 %>
-<%= link_to(new_scholar_path, class: 'post-btn') do %>
-  <span class='post-btn-text'>投稿する</span>
-  <%#= image-tag '' , size: '185x50 ,class: "post-btn-icon" %>
+<%= link_to(new_scholar_path, class: 'post-red-btn') do %>
+  <span class='post-btn-text'>POST</span>
 <%end%>
 <%# /投稿機能 %>
 
@@ -25,7 +25,7 @@
        <%= link_to scholar_path(scholar.id) do %>
         <div class='scholar-info'>
           <div class='scholar-img-content'>
-            <%= image_tag scholar.image, class: 'scholar-img'if scholar.image.attached? %>
+            <%= image_tag scholar.image, class: 'scholar-img'%>
           </div>
           <div class='scholar-text'>
          <%= scholar.text %>
@@ -43,7 +43,7 @@
       <%if @scholars.length == 0%>
       <li class='list'>
         <%= link_to '#' do %>
-        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "scholar-img" %>
+        <%= image_tag "/images/Photoelly014_TP_V.jpg", class: "scholar-img" %>
         <% end %>
       </li>
       <% end %>
@@ -52,8 +52,4 @@
   </div>
   <%# ピックアップカテゴリー%>
   
-
-  
-
-
 <%= render "shared/second-footer"%>
