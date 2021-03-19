@@ -8,7 +8,7 @@
       <%= @scholar.category.name %>
     </h2>
     <div class="scholar-img-content">
-      <%= image_tag @scholar.image.variant(resize: '300x300'), class:"scholar-box-img" if scholar.image.attached? %>
+      <%= image_tag @scholar.image.variant(resize: '300x300'), class:"scholar-box-img" if @scholar.image.attached? %>
     </div>
     <h2 class="name">
       <%= simple_format(@scholar.title) %>
