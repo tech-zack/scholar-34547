@@ -6,8 +6,8 @@ class Scholar < ApplicationRecord
   has_many :likes
   has_one_attached :image
   has_many :liked_users, through: :likes, source: :user
-  has_many :post
-
+  
+  validates :image, presence: true 
   validates :title, presence: true  
   validates :text,  presence: true 
   validates :category_id, numericality: { other_than: 1 } 

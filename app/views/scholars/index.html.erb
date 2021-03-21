@@ -5,7 +5,7 @@
 <%# 画面上部の画像部分%>
   <div class='title-contents'>
     <div class='service-title'>
-      勉強から学習へ、学習から学問へ scholarはあなたのPOSTを待っています
+      さあ、学問を学ぼう！ scholarはあなたのPOSTを待っています
     </div>
   </div>
 <%# /画面上部の画像部分%>
@@ -25,15 +25,11 @@
        <%= link_to scholar_path(scholar.id) do %>
         <div class='scholar-info'>
           <div class='scholar-img-content'>
-            <%= image_tag scholar.image, class: 'scholar-img'if scholar.image.attached? %>
+            <%= image_tag scholar.image, class: 'scholar-img' %>
           </div>
-          <div class='scholar-text'>
-         <%= scholar.text %>
           <a class='scholar-title'>
             <%= truncate(scholar.title, length:15) do%>
             <%= link_to "続きを読む" ,scholar_path(scholar.id),class:"scholar-read" %>
-            <div class='scholar-text'>
-         <%= scholar.text %>
               <%end%>
             <%end%>
           </a>

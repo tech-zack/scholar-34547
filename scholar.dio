@@ -1,34 +1,49 @@
-<mxfile host="65bd71144e" modified="2021-03-05T01:03:08.333Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="wTEGwXZ5lvS3ERESp7aE" type="embed">
+<mxfile>
     <diagram id="-PjZLZQCssTecPK7Wub4" name="ページ1">
-        <mxGraphModel dx="697" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="8" value="users&lt;br&gt;&lt;br&gt;nickname&lt;br&gt;email&lt;br&gt;password&lt;br&gt;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                <mxCell id="8" value="users&lt;br&gt;&lt;br&gt;nickname&lt;br&gt;email&lt;br&gt;password&lt;br&gt;" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="280" y="40" width="156" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="comments&lt;br&gt;&lt;br&gt;text&lt;br&gt;user_id&lt;br&gt;scholar_id" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                <mxCell id="10" value="messages&lt;br&gt;&lt;br&gt;text&lt;br&gt;user_id&lt;br&gt;scholar_id" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="40" y="320" width="156" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="scholars&lt;br&gt;&lt;br&gt;title&lt;br&gt;image&lt;br&gt;text&lt;br&gt;user_id&lt;br&gt;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                <mxCell id="11" value="scholars&lt;br&gt;&lt;br&gt;title&lt;br&gt;image&lt;br&gt;text&lt;br&gt;user_id&lt;br&gt;category_id" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="520" y="320" width="156" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" edge="1" parent="1">
+                <mxCell id="14" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="436" y="120" as="sourcePoint"/>
                         <mxPoint x="510" y="400" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8" target="10">
+                <mxCell id="15" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="8" target="10" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="310" y="270" as="sourcePoint"/>
                         <mxPoint x="410" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="16" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" edge="1" parent="1">
+                <mxCell id="16" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="11" target="10" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="196" y="440" as="sourcePoint"/>
-                        <mxPoint x="510" y="440" as="targetPoint"/>
+                        <mxPoint x="320" y="400" as="sourcePoint"/>
+                        <mxPoint x="200" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="likes&lt;br&gt;&lt;br&gt;user_id&lt;br&gt;scholar_id" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="40" width="156" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=-0.013;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="17" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="436" y="100" as="sourcePoint"/>
+                        <mxPoint x="536" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="17">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="680" y="390" as="sourcePoint"/>
+                        <mxPoint x="420" y="300" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
