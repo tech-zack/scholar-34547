@@ -79,6 +79,7 @@ https://i.gyazo.com/c023544c5025de228fe4eac05f4851ca.jpg
 
 ## コメント機能
 https://i.gyazo.com/686bc93be2b38d278adcd34b0442d05d.jpg
+![](https://i.gyazo.com/6779f85314aca1508bb86d3362887fdc.png)
 
 ## 利用方法
 1.アクセスするとトップページに遷移 
