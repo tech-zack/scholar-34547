@@ -45,11 +45,11 @@ scholarに投稿することや、投稿された記事を読むことで、勉�
 学んだことを仕事、生活に生かすことで、個人ではなく、社会によりよく貢献することが期待できるでしょう。
 
 ## 使用言語
-・Ruby
-・Ruby on Rails
+・Ruby2.6.5
+・Ruby on Rails6.0.0
 ・jQuery
 ・HTML/CSS
-・SQL
+・SQL0.4.4
 ・AWS（予定）
 
 ## デプロイ後のURL
@@ -173,3 +173,18 @@ http://scholar-34547.herokuapp.com
 - belongs_to :scholar
 
 ![](https://i.gyazo.com/a729951c86f8405c954d3e08777f4bd9.png)
+
+### ローカルでの動作方法
+git clone https://github.com/tech-zack/scholar-34547.git
+
+cd scholar-34547
+
+$ bundle install 
+
+$ rails db:create 
+
+$ rails db:migrate 
+
+$ rails s 
+
+ http://localhost:3000
