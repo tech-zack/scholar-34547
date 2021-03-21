@@ -57,41 +57,49 @@ http://scholar-34547.herokuapp.com
 
 ## テスト用のアカウント
 ・Basic認証 ID admin Pass 2222
+
 ・name:sample
 ・email:sample@example
 ・password:111111
 
 ## DEMO
 ## トップ画面
-https://i.gyazo.com/774ceb7dcf7d077cca487ef102330c3a.jpg
+![image](https://user-images.githubusercontent.com/78070415/111900819-fae53a00-8a77-11eb-9162-1ab59fdedd85.png)
+
 
 ## ユーザー新規登録画面
-https://i.gyazo.com/a0c80c32ceb196ef2fa7f4df8084a276.jpg
+![image](https://user-images.githubusercontent.com/78070415/111900918-7e069000-8a78-11eb-93f7-3f704f43cb72.png)
 
 ## ログイン画面
-https://i.gyazo.com/9e188539df59b01e887a20e8629133f8.jpg
+![image](https://user-images.githubusercontent.com/78070415/111900889-58798680-8a78-11eb-9d7a-42b194ef514a.png)
+
 
 ## 新規投稿画面
-https://i.gyazo.com/f24f3fa9986d991d0f4471406dbac432.jpg
+![image](https://user-images.githubusercontent.com/78070415/111900989-d342a180-8a78-11eb-8e09-dd2447ac6281.png)
 
-## 投稿画面
-https://i.gyazo.com/c023544c5025de228fe4eac05f4851ca.jpg
+
+## 投稿画面詳細
+![image](https://user-images.githubusercontent.com/78070415/111900853-29fbab80-8a78-11eb-8021-a8f88b5fec16.png)
 
 ## コメント機能
-https://i.gyazo.com/686bc93be2b38d278adcd34b0442d05d.jpg
-![](https://i.gyazo.com/6779f85314aca1508bb86d3362887fdc.png)
-![](https://i.gyazo.com/f9115bf0b062384206c6d64f5ea2f275.jpg)
+![image](https://user-images.githubusercontent.com/78070415/111901048-13098900-8a79-11eb-8bcf-bc4c2bbb22d7.png)
 
 
 ## 利用方法
 1.アクセスするとトップページに遷移 
+
 2.「sign-in」をクリック  
+
 3.ログインページに遷移した上で、上記テスト用アカウントでログイン
+
 ４.投稿されているコンテンツのimage画をクリックすると該当の詳細画面へ遷移
 ログイン中であればいいね機能を使用すること、投稿についてコメントを送ることが可能
+
 ５.トップページにあるPOSTボタンを押すと新規投稿画面に遷移
 それぞれ指定した要素を入力すると、What's newのところに遷移して追加される。また、mypageのPOSTボタンからも同じように投稿することが可能
+
 6.各ページにある左上にある検索フォームにてカテゴリーを検索することが可能
+
 ７.「sign-up」をクリックすることでログアウト機能が発言
 
 なお、ログインしなくても、検索機能を使用すること、投稿の詳細画面をみることは可能
@@ -140,7 +148,7 @@ https://i.gyazo.com/686bc93be2b38d278adcd34b0442d05d.jpg
 | title       | string        |  NOT NULL           |
 | text        | text          |  NOT NULL           |
 | image       | ActiveStorage | foreigen_key:true   |
-| user        | references    | foreigen_key:true   |
+| user_id     | references    | foreigen_key:true   |
 | category_id | interger      |  NOT NULL           |
 
 ### Association
@@ -164,4 +172,4 @@ https://i.gyazo.com/686bc93be2b38d278adcd34b0442d05d.jpg
 - belongs_to :user
 - belongs_to :scholar
 
-https://i.gyazo.com/cd92fc69166601a46e32ab6dac707c92.png
+![](https://i.gyazo.com/a729951c86f8405c954d3e08777f4bd9.png)
