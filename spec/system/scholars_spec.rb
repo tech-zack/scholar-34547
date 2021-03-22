@@ -3,7 +3,6 @@ RSpec.describe "投稿", type: :system do
   before do
     @user = FactoryBot.create(:user)
     @scholar_text = Faker::Lorem.sentence
-    @schokar_image = Faker::Lorem.sentence
     @scholar_title = Faker::Lorem.sentence
   end
   context '投稿できるとき' do
