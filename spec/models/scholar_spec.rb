@@ -10,10 +10,6 @@ RSpec.describe Scholar, type: :model do
       it 'title,text,category_id,imageが存在していれば保存できること' do
         expect(@scholar).to be_valid
       end
-      it 'imageがなくても入力できる' do
-        @scholar.image  = nil
-        expect(@scholar).to be_valid
-      end
     end
   end
 
@@ -27,6 +23,11 @@ RSpec.describe Scholar, type: :model do
         @scholar.text = nil
         @scholar.valid?
         expect(@scholar.errors.full_messages).to include("Text can't be blank")
+      end
+      it 'imageが空では保存できないこと' do
+        @scholar.image = nil
+        @scholar.valid?
+        expect(@scholar.errors.full_messages).to include("Image can't be blank")
       end
       it 'category_idが空では保存できないこと' do
         @scholar.category_id = nil
