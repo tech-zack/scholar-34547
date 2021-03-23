@@ -27,12 +27,12 @@
           <div class='scholar-img-content'>
             <%= image_tag scholar.image, class: 'scholar-img' %>
           </div>
-          <div class='scholar-title'>
+          <a class='scholar-title'>
             <%= truncate(scholar.title, length:15) do%>
             <%= link_to "続きを読む" ,scholar_path(scholar.id),class:"scholar-read" %>
               <%end%>
             <%end%>
-          </div>
+          </a>
         </div>
       </li>
      <% end %>
