@@ -56,9 +56,7 @@ http://scholar-34547.herokuapp.com
 ![image](https://user-images.githubusercontent.com/78070415/112106560-2fc8cc80-8bf1-11eb-9218-a03b5a3a0232.png)
 
 ## コメント機能
-![image](https://user-images.githubusercontent.com/78070415/112108568-b9799980-8bf3-11eb-9b2f-03d986247382.png)
-
-
+![image](https://user-images.githubusercontent.com/78070415/112110201-eb8bfb00-8bf5-11eb-9f03-2591738a5554.png)
 
 ## 利用方法
 1.アクセスするとトップページに遷移 
@@ -147,7 +145,7 @@ http://scholar-34547.herokuapp.com
 - belongs_to :user
 - belongs_to :scholar
 
-![](https://i.gyazo.com/a729951c86f8405c954d3e08777f4bd9.png)
+![image](https://user-images.githubusercontent.com/78070415/112110468-458cc080-8bf6-11eb-8b57-2737e2fe7901.png)
 
 ### ローカルでの動作方法
 git clone https://github.com/tech-zack/scholar-34547.git

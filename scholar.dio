@@ -1,10 +1,10 @@
 <mxfile>
     <diagram id="-PjZLZQCssTecPK7Wub4" name="ページ1">
-        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="91" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="8" value="users&lt;br&gt;&lt;br&gt;nickname&lt;br&gt;email&lt;br&gt;password&lt;br&gt;" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                <mxCell id="8" value="users&lt;br&gt;&lt;br&gt;nickname&lt;br&gt;email&lt;br&gt;encrypted_password" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="280" y="40" width="156" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="messages&lt;br&gt;&lt;br&gt;text&lt;br&gt;user_id&lt;br&gt;scholar_id" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
@@ -25,22 +25,22 @@
                         <mxPoint x="410" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="19" value="likes&lt;br&gt;&lt;br&gt;use_id&lt;br&gt;scholar_id" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                <mxCell id="19" value="likes&lt;br&gt;&lt;br&gt;use_id&lt;br&gt;scholar_id" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="550" y="40" width="156" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="10">
+                <mxCell id="20" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" target="10" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="500" y="440" as="sourcePoint"/>
                         <mxPoint x="197" y="440" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="22" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="19">
+                <mxCell id="22" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" target="19" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="436" y="80" as="sourcePoint"/>
                         <mxPoint x="536" y="-20" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" edge="1" parent="1" target="19">
+                <mxCell id="23" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" parent="1" target="19" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="680" y="400" as="sourcePoint"/>
                         <mxPoint x="420" y="210" as="targetPoint"/>
