@@ -413,10 +413,7 @@
   display: inline-block;
   margin-left: 37vw;
 }
- body{
-  background-size:cover; 
-  height:100vh  
- }
+ 
  .lists{
   display: inline-block;
   margin-left: 32vw;
@@ -429,10 +426,7 @@
   display: inline-block;
   margin-left: 28vw;
   }
-  body{                          
-    background-size:cover; 
-    height:100vh                               
-  }
+  
   .lists{
     display: inline-block;
     margin-left: 28vw;
