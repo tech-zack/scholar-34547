@@ -102,9 +102,9 @@
  .post-btn-text{
   display : inline-block;
    color: #272727;
-   background-color:red;
+   background-color:yellowgreen;
    border-radius: 100px;
-   padding: 15px;
+   padding: 10px;
    border: 1px solid #808080;
    font-family: fantasy;
  }
@@ -125,6 +125,7 @@
  .scholar-title{
   display: flex;
   justify-content: center;
+  color:#272727;
  }
 
  .scholar-img {
@@ -145,7 +146,7 @@
   justify-content:space-evenly;
   text-decoration: none;
   font-family: fantasy;
-  color:black;
+  color:#272727;
  
 }
 
@@ -212,6 +213,7 @@
 }
 
 .form-header-text{
+  margin-top: 20px;
   font-family: fantasy;
   font-size: 60px;
 }
@@ -256,7 +258,7 @@
 
  .scholar-blue-btn{
   
-  background-color: red;
+  background-color: yellowgreen;
   font-size: 24px;
   font-weight: bold;
   color: #272727;
@@ -271,7 +273,7 @@
 
  .scholar-destroy{
   
-  background-color: red;;
+  background-color: yellowgreen;
   font-size: 24px;
   font-weight: bold;
   color: #272727;
@@ -311,7 +313,7 @@
 
 .comment-btn {
   line-height: 48px;
-  background-color:red;
+  background-color:yellowgreen;
   border: 1px solid #272727;
   color: black;
   width: 50%;
@@ -353,6 +355,8 @@
   display: flex; 
   flex-direction: column;
   align-items: center;
+  width: 40vw;
+  height: 20vh;
 }
 .sell-btn-contents{
   display: flex;
@@ -363,10 +367,7 @@
   width: 40vw;
   height: 20vh;
 }
-.scholars-title{
-  width: 40vw;
-  height: 10vh;
-}
+
 .weight-bold-text{
   display: flex;
   flex-direction: column;
@@ -376,7 +377,7 @@
   border-radius: 100px;
   text-decoration: none;
   border: solid 2px #272727;
-  background-color: red;;
+  background-color: yellowgreen;
   font-size: 24px;
   color: #272727;
   margin-top: 10px;
@@ -385,9 +386,55 @@
   border-radius: 100px;
   text-decoration: none;
   border: solid 2px #272727;
-  background-color: red;;
+  background-color: yellowgreen;
   font-size: 24px;
   color: #272727;
   margin-top: 10px;
 }
 /*new*/
+
+/*user*/
+.post-btn-blue-text{
+  display : inline-block;
+   color: #272727;
+   background-color:yellowgreen;
+   border-radius: 100px;
+   margin-top: 40px;
+   margin-bottom: 40px;
+   padding: 10px;
+   border: 1px solid #808080;
+   font-family: fantasy;
+ }
+ /*user*/
+
+ /* タブレット表示時 */
+@media (max-width: 1024px) {
+.scholar-lists{
+  display: inline-block;
+  margin-left: 37vw;
+}
+ body{
+  background-size:cover; 
+  height:100vh  
+ }
+ .lists{
+  display: inline-block;
+  margin-left: 32vw;
+}
+}
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+  .scholar-lists{
+  display: inline-block;
+  margin-left: 28vw;
+  }
+  body{                          
+    background-size:cover; 
+    height:100vh                               
+  }
+  .lists{
+    display: inline-block;
+    margin-left: 28vw;
+  }
+}

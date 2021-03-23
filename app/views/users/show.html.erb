@@ -6,7 +6,7 @@
     </div>
   </div>
 <%= link_to(new_scholar_path, class: 'post-red-btn') do %>
-  <span class='post-btn-text'>POST</span>
+  <span class='post-btn-blue-text'>POST</span>
 <%end%>
 <%# 投稿一覧 %>
 <ul class='scholar-lists'>
@@ -16,9 +16,6 @@
         <div class='scholar-info'>
         <div class='scholar-img-content'>
          <%= image_tag scholar.image, class: 'scholar-img'if scholar.image.attached? %>
-        </div>
-        <div class='scholar-text'>
-         <%= scholar.text %>
         </div>
         <div class='scholar-title'>
             <%= truncate(scholar.title, length:15) do%>
