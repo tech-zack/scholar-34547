@@ -30,7 +30,7 @@ scholarに投稿することや、投稿された記事を読むことで、学�
 ・AWS（S3）
 
 ## デプロイ後のURL
-http://scholar-34547.herokuapp.com
+ https://scholar-34547.herokuapp.com/
 
 ## テスト用のアカウント
 ・Basic認証 ID admin Pass 2222
