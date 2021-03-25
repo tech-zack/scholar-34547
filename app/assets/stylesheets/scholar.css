@@ -13,6 +13,8 @@
 .scholar-main{
   background-image: url('/images/JSK542_boroboronoyousyo_TP_V4.jpg');
   background-size: cover;
+  background-attachment: fixed;         
+  background-position: center bottom center bottom;   
   font-family: fantasy;
   text-align: center;
   color: #fff;
@@ -78,6 +80,8 @@
   background-color:rgba(255,255,255,0.5);
   background-blend-mode:lighten;
   background-size: cover;
+  background-attachment: fixed;         
+  background-position: center center;   
  }
 /*body*/
 
@@ -413,9 +417,7 @@
   margin-left: 32vw;
 }
 
-body{
-  height:100vh;
-}
+
 }
 
  /* スマホ表示時 */
@@ -430,7 +432,5 @@ body{
     margin-left: 28vw;
   }
 
-  body{
-    height:100vh;
-  }
+  
 }
