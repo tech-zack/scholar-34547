@@ -218,13 +218,6 @@
   font-size: 60px;
 }
 
-
- /*show*/
- .name{
-  overflow-wrap: break-word;
- }
- /*show*/
-
  /*category*/
  .lists{
   display: flex; 
@@ -249,6 +242,7 @@
  .name{
   display: flex;
   justify-content: center;
+  word-break: break-word;
  }
 
  .destory-btn{
