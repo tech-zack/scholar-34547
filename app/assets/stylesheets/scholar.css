@@ -408,29 +408,17 @@
  /* タブレット表示時 */
 @media (max-width: 1024px) {
 .scholar-lists{
-  display: inline-block;
-  margin-left: 37vw;
-}
- 
- .lists{
-  display: inline-block;
-  margin-left: 32vw;
-}
-
-
+  display: flex;              
+  flex-wrap: wrap;            
+  align-content:stretch;
+ }
 }
 
  /* スマホ表示時 */
 @media (max-width: 599px) {
   .scholar-lists{
-  display: inline-block;
-  margin-left: 28vw;
+    display: flex;             
+    flex-wrap: wrap;           
+    align-content:stretch;      
   }
-  
-  .lists{
-    display: inline-block;
-    margin-left: 28vw;
-  }
-
-  
 }
