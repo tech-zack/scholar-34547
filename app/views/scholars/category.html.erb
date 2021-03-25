@@ -11,11 +11,11 @@
           <div class='scholar-img-content'>
           <%= image_tag scholar.image.variant(resize: '200x200'), class: 'scholar-img' %>
           </div>
-          <a class='scholar-title'>
+          <div class='scholar-title'>
             <%= truncate(scholar.title, length:15) do%>
             <%= link_to "続きを読む" ,scholar_path(scholar.id),class:"scholar-read" %>
             <%end%>
-          </a>
+          </div>
         </div>
        <% end %>
        <% end %>
