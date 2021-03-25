@@ -51,7 +51,7 @@ class ScholarsController < ApplicationController
   end
 
   def category
-    @scholars = @q.result.page(params[:page]).per(3).order("created_at DESC")
+    @scholars = @q.result.page(params[:page]).per(4).order("created_at DESC")
     category_id = params[:q][:category_id_eq]
     @category = Category.find_by(id: category_id)
   end
