@@ -10,10 +10,10 @@
         <div class="form">
           <div class="weight-bold-text">
             カテゴリー
-          <span class="indispensable">必須</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
-      </div>
     </div>
     <%# /タイトルカテゴリー %>
     
@@ -26,8 +26,9 @@
       <div class="click-upload">
        <p>
         クリックしてファイルをアップロード
-      </p>
-      <%= f.file_field :image, id:"scholars-image" %>
+       </p>
+        <%= f.file_field :image, id:"scholars-image" %>
+      </div>
     </div>
     <%# /投稿画像 %>
 
@@ -43,7 +44,7 @@
           内容
           <span class="indispensable">必須</span>
         </div>
-      <%= f.text_area :text, class:"scholars-text", id:"scholars-info", placeholder:"タイトル内容（必須 1,000文字まで)" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :text, class:"scholars-text", id:"scholars-info", placeholder:"タイトル内容（必須 1,000文字まで)" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
     <%# /タイトルと内容 %>

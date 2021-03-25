@@ -18,7 +18,7 @@
 
  <%# ピックアップカテゴリー%>
  <div class='scholar-contens'>
-    <h2 class='title'>What's news</h2>
+  <h2 class='title'>What's news</h2>
     <ul class='scholar-lists'>
       <% @scholars.each do |scholar|%>
       <li class='list'>
@@ -30,22 +30,22 @@
           <div class='scholar-title'>
             <%= truncate(scholar.title, length:15) do%>
             <%= link_to "続きを読む" ,scholar_path(scholar.id),class:"scholar-read" %>
-              <%end%>
             <%end%>
           </div>
         </div>
+       <%end%>
       </li>
      <% end %>
-      <%if @scholars.length == 0%>
+     <%if @scholars.length == 0%>
       <li class='list'>
         <%= link_to '#' do %>
         <%= image_tag "/images/Photoelly014_TP_V.jpg", class: "scholar-img" %>
         <% end %>
       </li>
-      <% end %>
+     <% end %>
     </ul>
     <%= paginate @scholars %>
-  </div>
-  <%# ピックアップカテゴリー%>
+</div>
+<%# ピックアップカテゴリー%>
   
 <%= render "shared/second-footer"%>
