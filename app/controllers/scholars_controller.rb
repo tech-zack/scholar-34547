@@ -6,7 +6,7 @@ class ScholarsController < ApplicationController
   protect_from_forgery except: :search 
 
   def index
-    @scholars = Scholar.order(created_at: :desc).page(params[:page]).per(3)
+    @scholars = Scholar.order(created_at: :desc).page(params[:page]).per(4)
   end
 
   def new

@@ -9,32 +9,7 @@
   <span class='post-btn-blue-text'>POST</span>
 <%end%>
 <%# 投稿一覧 %>
-<ul class='scholar-lists'>
-  <% @scholars.each do |scholar| %>
-    <li class='list'>
-       <%= link_to scholar_path(scholar.id) do %>
-        <div class='scholar-info'>
-          <div class='scholar-img-content'>
-          <%= image_tag scholar.image, class: 'scholar-img' %>
-          </div>
-          <div class='scholar-title'>
-            <%= truncate(scholar.title, length:15) do%>
-            <%= link_to "続きを読む" ,scholar_path(scholar.id),class:"scholar-read" %>
-            <%end%>
-          </div>
-        </div>
-       <% end %>
-    </li>
-  <% end %>
-   <%if @scholars.length == 0%>
-      <li class='list'>
-        <%= link_to '#' do %>
-        <%= image_tag "/images/Photoelly014_TP_V.jpg", class: "scholar-img" %>
-        <% end %>
-      </li>
-    <% end %>
-</ul>
-<%= paginate @scholars %>
+<%= render "shared/post"%>
 <%#/ 投稿一覧 %>
 
 <%= render "shared/footer" %>
