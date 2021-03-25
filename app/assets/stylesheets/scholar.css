@@ -418,6 +418,10 @@
   display: inline-block;
   margin-left: 32vw;
 }
+
+body{
+  height:100vh;
+}
 }
 
  /* スマホ表示時 */
@@ -430,5 +434,9 @@
   .lists{
     display: inline-block;
     margin-left: 28vw;
+  }
+
+  body{
+    height:100vh;
   }
 }
