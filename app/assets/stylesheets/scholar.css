@@ -151,7 +151,11 @@
   text-decoration: none;
   font-family: fantasy;
   color:#272727;
- 
+}
+
+.scholar-explain{
+  background:#272727;
+  padding: 5px;
 }
 
 /*index*/
@@ -163,7 +167,7 @@
   display: flex;
   justify-content: center;
   font-family: fantasy;
-  color: #272727;
+  color: #fff;
 }
 
 /*second_footer*/
@@ -171,12 +175,16 @@
 /*_footer*/
 .cation{
   font-family: fantasy;
+  background:#272727;
+  margin-top: 180px;
+  padding: 10px;
 }
 
 .sentence{
   display: flex;
   justify-content: center;
-  color:#272727;
+  color:#fff;
+  margin-top: 5px;
 }
 
 /*_footer*/
@@ -199,8 +207,8 @@
   border-right:none;
   border-left:none;
   border-top:none;
-  outline: none; /* クリックしたときに表示される枠線を消す */
-  background: transparent; /* 背景の灰色を消す */
+  outline: none; 
+  background: transparent; 
   width: 250px;
   height: 30px;
   border-color: #272727;
@@ -210,8 +218,8 @@
   margin-top: 30px;
   width: 250px;
   height: 40px;
-  outline: none; /* クリックしたときに表示される枠線を消す */
-  background: transparent; /* 背景の灰色を消す*/
+  outline: none; 
+  background: transparent; 
   border-color: #272727;
   font-family: fantasy;
 }
@@ -305,7 +313,7 @@
   border-right:none;
   border-left:none;
   border-top:none;
-  outline: none; /* クリックしたときに表示される枠線を消す */
+  outline: none; 
   background: transparent; 
 }
 
@@ -411,6 +419,19 @@
    font-family: fantasy;
  }
  /*user*/
+
+ /*検索機能*/
+ .search-btn{
+  font-family: fantasy;
+  border-radius: 100px;
+  border: 1px solid #808080;
+  background-color:yellowgreen;
+  padding: 1px;
+ }
+
+ .scholar_search{
+   background:#272727;
+ }
 
  /* タブレット表示時 */
 @media (max-width: 1024px) {

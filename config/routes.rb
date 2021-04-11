@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'messages/new'
-  devise_for :users
-  get'/scholar/category', to: "scholars#category"
   get 'scholars/index'
+  get 'messages/new'
+  get'/scholar/category', to: "scholars#category"
+  devise_for :users
   root to: 'scholars#index'
   resources :scholars do
     resources :messages, only: [:create]
