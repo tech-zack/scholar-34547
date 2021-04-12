@@ -1,13 +1,13 @@
 <header class='top-page-header'>
-    </div>
   <div class='nav'>
     <ul class='lists-left'>
+      <li><%= link_to 'return', root_path, class:"scholar2-back-btn" %></li>
       <% if user_signed_in?%>
         <li><%= link_to "#{current_user.nickname}さん",user_path(current_user.id), class: "user-nickname" %></li>
-        <li><%=link_to 'log out', destroy_user_session_path, method: :delete,class: "logout"%>
+        <li><%=link_to 'log out', destroy_user_session_path, method: :delete,class: "logout"%></li>
       <% else %>
-        <li><%=link_to 'log-in', new_user_session_path, class: "log-in"%>
-        <li><%=link_to 'sign-up', new_user_registration_path,class: "sign-up"%>
+        <li><%=link_to 'log-in', new_user_session_path, class: "log-in"%></li>
+        <li><%=link_to 'sign-up', new_user_registration_path,class: "sign-up"%></li>
       <% end %>
     </ul>
   </div>
