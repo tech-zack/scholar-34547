@@ -41,22 +41,22 @@ scholarに投稿することや、投稿された記事を読むことで、学�
 
 ## DEMO
 ## トップ画面
-![image](https://user-images.githubusercontent.com/78070415/112457019-ace57480-8d9e-11eb-9009-9148c32663d6.png)
+![image](https://user-images.githubusercontent.com/78070415/114346937-2bb01f00-9b9f-11eb-868e-6d7057046606.png)
 
 ## ユーザー新規登録画面
-![image](https://user-images.githubusercontent.com/78070415/112457442-1feeeb00-8d9f-11eb-88d1-468303f51a0a.png)
+![image](https://user-images.githubusercontent.com/78070415/114347051-57cba000-9b9f-11eb-9267-6177798618ee.png)
 
 ## ログイン画面
-![image](https://user-images.githubusercontent.com/78070415/112457275-efa74c80-8d9e-11eb-9a07-b8b27da86dac.png)
+![image](https://user-images.githubusercontent.com/78070415/114347225-95c8c400-9b9f-11eb-84a3-89cca7f338cc.png)
 
 ## 新規投稿画面
-![image](https://user-images.githubusercontent.com/78070415/112106186-b630de80-8bf0-11eb-9192-0fc11748dc77.png)
+
 
 ## 投稿画面詳細
-![image](https://user-images.githubusercontent.com/78070415/112106560-2fc8cc80-8bf1-11eb-9218-a03b5a3a0232.png)
+![image](https://user-images.githubusercontent.com/78070415/114347589-20112800-9ba0-11eb-8e64-45213de0bdb4.png)
 
 ## コメント機能
-![image](https://user-images.githubusercontent.com/78070415/112110201-eb8bfb00-8bf5-11eb-9f03-2591738a5554.png)
+![image](https://user-images.githubusercontent.com/78070415/114347899-b3e2f400-9ba0-11eb-8584-20ab20286c72.png)
 
 ## 利用方法
 1.アクセスするとトップページに遷移 
