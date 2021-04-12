@@ -50,7 +50,7 @@ scholarに投稿することや、投稿された記事を読むことで、学�
 ![image](https://user-images.githubusercontent.com/78070415/114347225-95c8c400-9b9f-11eb-84a3-89cca7f338cc.png)
 
 ## 新規投稿画面
-
+![image](https://user-images.githubusercontent.com/78070415/114348652-c90c5280-9ba1-11eb-83a4-e71da3c50ee4.png)
 
 ## 投稿画面詳細
 ![image](https://user-images.githubusercontent.com/78070415/114347589-20112800-9ba0-11eb-8e64-45213de0bdb4.png)
